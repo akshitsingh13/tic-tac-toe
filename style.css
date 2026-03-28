@@ -1,14 +1,41 @@
+body {
+    margin : 0;
+    padding: 16px;
+}
+
+.game-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 300px;
+    background-color: rgb(49, 49, 49);
+    padding: 24px;
+    border-radius: 10px;
+}
+
 .game{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 16px;
+    gap: 8px;
     height: 300px;
     width: 300px;
 }
 .game-box{
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+}
+
+.resetBtn{
+    background-color: rgb(251, 81, 38);
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    width: 100%;
+    font-size: 40px;
+    color: white;
 }

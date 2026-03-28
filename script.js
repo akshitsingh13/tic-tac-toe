@@ -40,8 +40,8 @@ function gameStart() {
 
             if (winCheck()) return;
 
-            if (board.every(cell => cell !== "")){
-                alert("Draw!");
+            if (board.every(cell => cell !== "")) {
+                setTimeout(() => alert("Draw!!"), 150);
                 return;
             }
 
@@ -54,11 +54,19 @@ function winCheck() {
     for (let condition of winCondition) {
         const [a, b, c] = condition;
         if (board[a] !== "" && board[a] === board[b] && board[b] === board[c]) {
-            alert(board[a] + " wins!");
+            setTimeout(() => alert(board[a] + " wins!"), 150);
             return true;
         }
     }
     return false;
+}
+
+function resetBoard() {
+    allBoxes.forEach(box => {
+        box.style.backgroundImage = "";
+    })
+    board = ["", "", "", "", "", "", "", "", ""];
+    currentPlayer = player1;
 }
 
 gameStart();
