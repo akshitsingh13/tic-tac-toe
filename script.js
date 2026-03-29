@@ -30,11 +30,11 @@ function gameStart() {
 
             if (currentPlayer === player1) {
                 e.target.style.backgroundImage = "url('Assests/Icons/O-Final.png')";
-                e.target.style.backgroundColor = "blue";
+                e.target.style.backgroundColor = "#28b3de";
             }
             else {
                 e.target.style.backgroundImage = "url('Assests/Icons/X-Final.png')";
-                e.target.style.backgroundColor = "yellow";
+                e.target.style.backgroundColor = "#ffdd00";
             }
 
             e.target.style.backgroundSize = "cover";

@@ -11,6 +11,7 @@
 
 <body>
     <div class="game-body">
+        <div class="game-title">TIC-TAC-TOE</div>
         <div class="game">
             <div class="game-box" data-index="0" onclick="changeToImage()"></div>
             <div class="game-box" data-index="1" onclick="changeToImage()"></div>
@@ -23,6 +24,34 @@
             <div class="game-box" data-index="6" onclick="changeToImage()"></div>
             <div class="game-box" data-index="7" onclick="changeToImage()"></div>
             <div class="game-box" data-index="8" onclick="changeToImage()"></div>
+        </div>
+
+        <div class="display-current-player">
+            <div class="display-title">Points</div>
+
+            <div class="o-player">
+                <div class="o-title">O</div>
+                <div class="o-points">
+                    <input type="text" readonly>
+                </div>
+            </div>
+
+            <div class="x-player">
+                <div class="x-title">X</div>
+                <div class="x-points">
+                    <input type="text" readonly>
+                </div>
+            </div>
+
+        </div>
+        <div class="winner">
+            <div class="winner-title">Winner</div>
+            <div class="winner-display">
+                <input type="text" readonly>
+            </div>
+        </div>
+        <div class="reset">
+            <button onclick="resetPoints()" class="resetBtn">Reset Points</button>
         </div>
         <div class="reset">
             <button onclick="resetBoard()" class="resetBtn">Reset</button>

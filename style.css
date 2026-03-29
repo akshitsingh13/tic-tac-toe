@@ -1,27 +1,36 @@
 body {
-    margin : 0;
-    padding: 16px;
+    margin: 0;
+    padding: 8px;
 }
 
-.game-body{
+.game-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
+    gap: 8px;
     max-width: 300px;
     background-color: rgb(49, 49, 49);
-    padding: 24px;
+    padding: 8px;
     border-radius: 10px;
 }
 
-.game{
+.game-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}
+
+.game {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     height: 300px;
     width: 300px;
 }
-.game-box{
+
+.game-box {
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     display: flex;
@@ -30,12 +39,83 @@ body {
     border-radius: 10px;
 }
 
-.resetBtn{
+.display-title {
+    color: white;
+    font-size: 24px;
+    padding: 0px 4px;
+    border-radius: 6px;
+}
+
+.display-current-player {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #434343;
+    padding: 4px;
+    border-radius: 6px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.o-player,
+.x-player {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-title,
+.x-title,
+.winner-title {
+    color: white;
+    font-size: 24px;
+    padding: 2px 4px;
+    border-radius: 6px;
+}
+
+.o-title {
+    background-color: #28b3de;
+}
+
+.x-title {
+    background-color: #ffdd00;
+}
+
+.o-points input,
+.x-points input,
+.winner-display input {
+    width: 24px;
+    /* height: 24px; */
+    font-size: 24px;
+    background: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 2px 4px;
+    border-radius: 6px;
+}
+
+.winner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.winner-title {
+    background-color: #4cf227;
+}
+
+.resetBtn {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(251, 81, 38);
     border: none;
     border-radius: 5px;
-    height: 48px;
+    height: 40px;
     width: 100%;
-    font-size: 40px;
+    font-size: 32px;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
