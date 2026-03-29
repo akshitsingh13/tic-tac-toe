@@ -30,15 +30,25 @@ function gameStart() {
 
             if (currentPlayer === player1) {
                 e.target.style.backgroundImage = "url('Assests/Icons/O-Final.png')";
+                e.target.style.backgroundColor = "blue";
             }
             else {
                 e.target.style.backgroundImage = "url('Assests/Icons/X-Final.png')";
+                e.target.style.backgroundColor = "yellow";
             }
 
             e.target.style.backgroundSize = "cover";
             e.target.style.backgroundPosition = "center";
 
-            if (winCheck()) return;
+            const winner = winCheck();
+
+            if (winner) {
+                winner.forEach(index => {
+                    allBoxes[index].style.backgroundColor = "#4cf227";
+                });
+                setTimeout(() => alert(board[winner[0]] + " wins!"), 150);
+                return;
+            }
 
             if (board.every(cell => cell !== "")) {
                 setTimeout(() => alert("Draw!!"), 150);
@@ -54,16 +64,18 @@ function winCheck() {
     for (let condition of winCondition) {
         const [a, b, c] = condition;
         if (board[a] !== "" && board[a] === board[b] && board[b] === board[c]) {
-            setTimeout(() => alert(board[a] + " wins!"), 150);
-            return true;
+            // setTimeout(() => alert(board[a] + " wins!"), 150);
+            // board[a].style.backgroundColor = board[b].style.backgroundColor = board[c].style.backgroundColor = "green";
+            return condition;
         }
     }
-    return false;
+    return null;
 }
 
 function resetBoard() {
     allBoxes.forEach(box => {
         box.style.backgroundImage = "";
+        box.style.backgroundColor = "";
     })
     board = ["", "", "", "", "", "", "", "", ""];
     currentPlayer = player1;
