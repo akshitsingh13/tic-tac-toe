@@ -64,6 +64,17 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.points-and-rule{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.rule {
+    color: white;
+}
+
 .o-player,
 .x-player {
     display: flex;
